@@ -552,7 +552,7 @@
             Windows (PowerShell Script)
           </div>
           <div class="code-line">
-            <code id="cmd-vd-ps">irm "https://raw.githubusercontent.com/plub845/VideoDownloaderApp/main/VideoDownloaderApp/main/install.ps1" -OutFile "$env:TEMP\VideoDownloaderApp-install.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\VideoDownloaderApp-install.ps1"</code>
+            <code id="cmd-vd-ps">irm https://raw.githubusercontent.com/plub845/VideoDownloaderApp/main/publish/installer/install.ps1 | iex</code>
             <button class="copy-btn" onclick="copyCmd('cmd-vd-ps', this)">COPY</button>
           </div>
         </div>
@@ -564,7 +564,7 @@
             Linux (Terminal bash)
           </div>
           <div class="code-line">
-            <code id="cmd-vd-linux">wget -O install.sh "https://github.com/plub845/VideoDownloaderApp/releases/latest/download/install.sh" && chmod +x install.sh && ./install.sh</code>
+            <code id="cmd-vd-linux">curl -fsSL https://raw.githubusercontent.com/plub845/VideoDownloaderApp/main/publish/installer/install.sh | bash</code>
             <button class="copy-btn" onclick="copyCmd('cmd-vd-linux', this)">COPY</button>
           </div>
         </div>
